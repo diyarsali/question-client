@@ -2,6 +2,10 @@
   "name": "who-know-me",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "17.3.0",
+    "npm": "8.3.0"
+  },
   "dependencies": {
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
