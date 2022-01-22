@@ -14,11 +14,11 @@ import axios from "../../axios";
 import jwt_decode from "jwt-decode";
 
 const Question = () => {
-  const [question, setQuestion] = useState("diyar");
-  const [answerA, setAnswerA] = useState("1");
-  const [answerB, setAnswerB] = useState("2");
-  const [answerC, setAnswerC] = useState("3");
-  const [answerD, setAnswerD] = useState("4");
+  const [question, setQuestion] = useState("");
+  const [answerA, setAnswerA] = useState("");
+  const [answerB, setAnswerB] = useState("");
+  const [answerC, setAnswerC] = useState("");
+  const [answerD, setAnswerD] = useState("");
   const [realAnswer, setRealAnswer] = useState("A");
   const [counter, setCounter] = useState(0);
   const [validation, setValidation] = useState(false);
@@ -29,7 +29,6 @@ const Question = () => {
 
   useEffect(() => {
     try {
-      console.log("ssssaaaaa");
       var decoded = jwt_decode(localStorage.getItem("token"));
       const username = decoded.username;
 
@@ -41,13 +40,12 @@ const Question = () => {
           setgetAllQuestion(res.data);
           // if we have out number of question
           // setCounter(res.data.length + 1);
-          console.log(res.data.length);
+          // console.log(res.data.length);
           if (res.data.length !== 0 && res.data.length === 5) {
             //set counter to one if 5 questions
             setComplete(true);
             setCounter(0);
             //
-            console.log("ss");
           }
         });
     } catch (err) {
@@ -96,12 +94,12 @@ const Question = () => {
             .catch((err) => {
               console.log(err);
             });
-          // setQuestion("");
-          // setAnswerA("");
-          // setAnswerB("");
-          // setAnswerC("");
-          // setAnswerD("");
-          // setRealAnswer("");
+          setQuestion("");
+          setAnswerA("");
+          setAnswerB("");
+          setAnswerC("");
+          setAnswerD("");
+          setRealAnswer("");
         }
       }
     } catch (err) {

@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import "../css/result.css";
 const resultChild = ({ data }) => {
-  console.log(data);
   const printAll = data.map((doc, i) => {
     return (
       <div className="child-box" key={i} style={{ "--order": i }}>

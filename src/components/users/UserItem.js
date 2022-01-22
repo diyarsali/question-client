@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import "../css/users.css";
 
 const UserItem = ({ users, answerQuestion }) => {
-  console.log(users);
   const item = users.map((user, i) => {
     return (
       <div className="userItem-wrapper" key={i} style={{ "--order": i }}>
