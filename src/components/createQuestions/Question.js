@@ -14,11 +14,11 @@ import axios from "../../axios";
 import jwt_decode from "jwt-decode";
 
 const Question = () => {
-  const [question, setQuestion] = useState("halaw");
-  const [answerA, setAnswerA] = useState("choni");
-  const [answerB, setAnswerB] = useState("chaki");
-  const [answerC, setAnswerC] = useState("bashm");
-  const [answerD, setAnswerD] = useState("supas");
+  const [question, setQuestion] = useState("");
+  const [answerA, setAnswerA] = useState("");
+  const [answerB, setAnswerB] = useState("");
+  const [answerC, setAnswerC] = useState("");
+  const [answerD, setAnswerD] = useState("");
   const [realAnswer, setRealAnswer] = useState("A");
   const [counter, setCounter] = useState(0);
   const [validation, setValidation] = useState(false);
@@ -94,12 +94,12 @@ const Question = () => {
             .catch((err) => {
               console.log(err);
             });
-          // setQuestion("");
-          // setAnswerA("");
-          // setAnswerB("");
-          // setAnswerC("");
-          // setAnswerD("");
-          // setRealAnswer("");
+          setQuestion("");
+          setAnswerA("");
+          setAnswerB("");
+          setAnswerC("");
+          setAnswerD("");
+          setRealAnswer("");
         }
       }
     } catch (err) {
