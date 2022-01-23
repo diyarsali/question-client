@@ -18,7 +18,7 @@ const UserItem = ({ users, answerQuestion }) => {
             {" "}
             {user.name}
           </p>
-          <p style={{ fontSize: "16px", color: "#f44336", margin: 0 }}>
+          <p style={{ fontSize: "10px", color: "#f44336", margin: 0 }}>
             {" "}
             @{user.username}
           </p>

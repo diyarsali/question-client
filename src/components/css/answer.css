@@ -71,10 +71,14 @@
   align-items: center;
   /* flex-wrap: wrap; */
 }
+/*     */
+
+/*  */
+
 .Choosquestion-group-each {
   width: 100%;
 
-  border-radius: 4px;
+  /* border-radius: 4px; */
   padding: 8px;
   box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
@@ -83,14 +87,30 @@
 
   word-wrap: break-word;
 }
+
+.Choosquestion-group-each:active {
+  background: rgb(133, 131, 131);
+  animation: fadein 1s ease-in-out;
+}
+
+
 .each-letter {
   color: #f44336;
 }
 .each-answer {
   word-wrap: break-word;
 }
-.Choosquestion-group-each:hover {
+/* .Choosquestion-group-each:hover {
   background-color: #757de8;
+} */
+
+@keyframes fadein {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 
 @media screen and (max-width: 680px) {

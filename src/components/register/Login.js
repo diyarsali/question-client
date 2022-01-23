@@ -30,7 +30,7 @@ const Login = () => {
       password: password,
       text: text,
     });
-
+    // console.log(res.data);
     const { data } = res;
     setID(data.id);
     localStorage.setItem("token", data.token);
