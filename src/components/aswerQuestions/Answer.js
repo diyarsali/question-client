@@ -58,12 +58,6 @@ const Answer = () => {
           setUsername(res.data.AnsweringTo);
           setQuestionArr(res.data.question);
         });
-      // let isCancelled = false;
-      // 		if (!isCancelled) {
-      // }
-      // return () => {
-      // 	isCancelled = true;
-      // };
 
       hasFetchedData.current = true;
     }

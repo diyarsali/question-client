@@ -40,11 +40,17 @@ const Question = () => {
           setgetAllQuestion(res.data);
           // if we have out number of question
           // setCounter(res.data.length + 1);
-          // console.log(res.data.length);
+
           if (res.data.length !== 0 && res.data.length === 5) {
             //set counter to one if 5 questions
             setComplete(true);
             setCounter(0);
+            //
+          }
+          if (res.data.length !== 0 && res.data.length !== 5) {
+            console.log(res.data.length);
+
+            setCounter(res.data.length);
             //
           }
         });
@@ -54,7 +60,7 @@ const Question = () => {
     }
     // console.log(username);
   }, [complete]);
-
+  console.log("counter  " + counter);
   const nextQuestion = () => {
     try {
       var decoded = jwt_decode(localStorage.getItem("token"));
@@ -115,7 +121,7 @@ const Question = () => {
         <div className="question-wrapper">
           <div className="question-box">
             <div className="title"> Create 5 Question</div>
-            <p> {`Question: ${counter + 1} `}</p>
+            <p> {`Question: ${counter} `}</p>
             <div className="register-from">
               <div className="question-input">
                 <TextField

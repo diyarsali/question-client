@@ -44,7 +44,7 @@ const Users = () => {
         })
         .then((res) => {
           setUser(res.data);
-          console.log(res.data);
+
           setIsLoading(false);
         });
     } catch (err) {
@@ -57,7 +57,8 @@ const Users = () => {
       authID: id,
     });
     let question = res.data.question;
-    if (question.length === 0) {
+    console.log(question.length);
+    if (question.length < 5) {
       setOpen(true);
     } else {
       console.log(res.data);
