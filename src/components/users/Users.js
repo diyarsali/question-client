@@ -44,7 +44,7 @@ const Users = () => {
         })
         .then((res) => {
           setUser(res.data);
-          // console.log(res.data);
+          console.log(res.data);
           setIsLoading(false);
         });
     } catch (err) {
