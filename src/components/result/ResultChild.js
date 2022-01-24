@@ -3,7 +3,7 @@ import "../css/result.css";
 const resultChild = ({ data }) => {
   const printAll = data.map((doc, i) => {
     return (
-      <div className="child-box" key={i} style={{ "--order": i }}>
+      <div className="child-box" key={i}>
         <div className="username">@{doc.answearUsername}</div>
 
         <div className="result-knowing-number">

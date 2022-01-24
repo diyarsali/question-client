@@ -4,7 +4,7 @@ import "../css/users.css";
 const UserItem = ({ users, answerQuestion }) => {
   const item = users.map((user, i) => {
     return (
-      <div className="userItem-wrapper" key={i} style={{ "--order": i }}>
+      <div className="userItem-wrapper" key={i}>
         <div className="each-user">
           <p
             onClick={answerQuestion.bind(null, user._id)}
