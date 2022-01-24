@@ -75,7 +75,7 @@ const Question = () => {
       } else {
         setValidation(false);
 
-        if (counter === 21) {
+        if (counter === 5) {
           setComplete(true);
         } else {
           setCounter(counter + 1);
@@ -115,7 +115,7 @@ const Question = () => {
         <div className="question-wrapper">
           <div className="question-box">
             <div className="title"> Create 5 Question</div>
-            <p> {`Question: ${counter} `}</p>
+            <p> {`Question: ${counter + 1} `}</p>
             <div className="register-from">
               <div className="question-input">
                 <TextField
